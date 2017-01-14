@@ -1,0 +1,17 @@
+.video-game-page {
+  padding: 30px 0;
+  
+  .video-game-columns {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    &:nth-child(odd) {
+      margin-left: 0;
+    }
+  }
+  
+  p {
+    width: 80%;
+    margin: 1rem auto;
+  }
+  
+}
