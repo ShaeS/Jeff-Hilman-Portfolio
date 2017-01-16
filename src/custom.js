@@ -25,6 +25,20 @@ $(document).ready(function () {
     });
     
   });
+  
+  $(".project-button").click(function(e) {
+    e.preventDefault();
+    $(".projects-popup").children("iframe").attr("src", $(this).siblings("iframe").attr("src"));$(this).siblings("iframe").attr("src")
+    $("main").addClass("main-blurred");
+    $(".darken-background").addClass("show");
+    $(".projects-popup").addClass("show");
+  });
+  
+  $(".darken-background").click(function() {
+    $("main").removeClass("main-blurred");
+    $(this).removeClass("show");
+    $(".projects-popup").removeClass("show");
+  });
 
 
 

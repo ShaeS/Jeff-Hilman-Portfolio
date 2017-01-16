@@ -3,6 +3,7 @@ import NavLink from './NavLink';
 import Footer from './Footer';
 import Social from './Social';
 import Header from './Header';
+import Popup from './Popup';
 
 class App extends Component {
   render() {
@@ -12,8 +13,8 @@ class App extends Component {
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/video-game-projects">Video Game Projects</NavLink></li>
-            <li><NavLink to="/teachers">Film Projects</NavLink></li>
-            <li><NavLink to="/courses">Music Projects</NavLink></li>
+            <li><NavLink to="/film-projects">Film Projects</NavLink></li>
+            <li><NavLink to="/music-projects">Music Projects</NavLink></li>
             <li><NavLink to="/courses">About Me</NavLink></li>
             <li><NavLink to="/courses">Contact</NavLink></li>
           </ul>
@@ -21,7 +22,9 @@ class App extends Component {
             <Social />
           </div>
         </nav>
+      <Popup />
       <main>
+      <div className="darken-background"></div>
       <Header />
         { this.props.children }
       <Footer />

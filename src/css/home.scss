@@ -4,6 +4,7 @@ HERO
 
 .hero {
   position: relative;
+  z-index: 1;
   height: 100vh;
   background-color: $Grey;
   background:  url(../assets/notes.svg), url(../assets/soundwaves.svg), linear-gradient(to right, #64BCDF, #3FA7D1 50%, #333 0, #242424);
@@ -22,6 +23,7 @@ HERO
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-shadow: $shadow1;
 
   .hero--content {
     text-align: center;

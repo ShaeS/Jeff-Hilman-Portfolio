@@ -91,16 +91,64 @@ iframe {
 
 main {
   background: white;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+  transition: transform 0.4s, filter 0.6s;
   position: relative;
   z-index: 1;
 
   &.menu-open {
     -webkit-transform: translateX(-250px);
     transform: translateX(-250px);
+  }
+  &.main-blurred {
+    -webkit-filter: blur(3px);
+	  filter: blur(3px);
+  }
+}
+
+.projects-popup {
+	position: fixed;
+	top: 10vh; left: 50%;
+	z-index: 6;
+  background: white;
+	border-radius: 3px;
+  box-shadow: $shadow5;
+  width: 560px;
+  max-height: 80vh;
+  margin-left: -280px;
+  overflow-y: scroll;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  iframe {
+    width: inherit;
+    height: 315px;
+    box-shadow: none;
+  }
+  p {
+    padding: 40px;
+  }
+}
+
+.darken-background {
+  background: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
+  &.show {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -152,6 +200,7 @@ BANNER
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-shadow: $shadow1;
   .banner--content {
     text-align: center;
     color: white;
