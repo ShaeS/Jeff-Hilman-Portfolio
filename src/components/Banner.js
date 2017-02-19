@@ -1,12 +1,22 @@
 import React from 'react';
+import NavLink from './NavLink';
 
 const Banner = (props) => {
+  var buttonLink = "";
+  var buttonText = "";
+  if ( props.button == 'demos' ) {
+    buttonLink = "/";
+    buttonText = "Demo Reels";
+  } else {
+    buttonLink = "/contact";
+    buttonText = "Contact Me";
+  }
   return (
     <div>
       <section className="banner">
             <div className="banner--content">
               <h1>{props.title}</h1>
-              <a className="primary-button">Contact Me</a>
+              <NavLink to={buttonLink} className="primary-button">{buttonText}</NavLink>
             </div>
       </section>
     </div>
@@ -14,7 +24,8 @@ const Banner = (props) => {
 }
 
 Banner.propTypes = {
-  title: React.PropTypes.string.isRequired
+  title: React.PropTypes.string.isRequired,
+  button: React.PropTypes.string
 };
 
 export default Banner;

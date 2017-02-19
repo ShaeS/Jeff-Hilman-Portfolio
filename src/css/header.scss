@@ -89,4 +89,17 @@ header {
       transform: translateY(-0.4em) rotate(90deg);
     }
   }
+  
+  @include breakpoint(xs) {
+    padding: 15px 20px;
+  }
+
+  @include breakpoint(xxs) {
+    
+    .header--logo {
+      width: 110px;
+    }
+    
+  }
+  
 }

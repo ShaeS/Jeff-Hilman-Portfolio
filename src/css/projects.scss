@@ -6,6 +6,7 @@
     margin-bottom: 50px;
     &:nth-child(odd) {
       margin-left: 0;
+      clear: left;
     }
   }
   
@@ -14,4 +15,142 @@
     margin: 1rem auto;
   }
   
+  .projects-popup {
+    position: fixed;
+    top: 10vh; left: 50%;
+    z-index: 6;
+    background: white;
+    border-radius: 3px;
+    box-shadow: $shadow5;
+    width: 560px;
+    margin-left: -280px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.6s;
+    -webkit-transition: opacity 0.6s;
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    iframe {
+      width: inherit;
+      height: 315px;
+      box-shadow: none;
+    }
+    p {
+      padding: 40px;
+      overflow-y: scroll;
+      max-height: 30vh;
+    }
+  }
+  
+  .music-iframe {
+    height: 470px;
+  }
+  
+  .music-button {
+    margin-bottom: 30px;
+  }
+  
+  .close-popup {
+    position: absolute;
+    top: -19px;
+    right: -19px;
+    width: 38px;
+    height: 38px;
+    box-shadow: $shadow2;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    svg {
+      circle {
+        fill: $Blue;
+        transition: fill 0.3s;
+      }
+    }
+    &:hover {
+      box-shadow: $shadow3;
+      svg {
+        circle {
+          fill: darken($Blue, 10%);
+        }
+      }
+    }
+  }
+  
+}
+
+.darken-background {
+  background: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@include breakpoint(xs) {
+  .projects-page {
+    .projects-popup {
+      left: 0;
+      right: 0;
+      width: 100%;
+      margin-left: 0;
+      iframe {
+        height: 315px;
+      }
+      .close-popup {
+        background: $Blue;
+        border-radius: 3px 3px 0 0;
+        box-shadow: none;
+        position: static;
+        text-align: center;
+        width: auto;
+        height: 42px;
+        svg {
+          width: 42px;
+          height: 42px;
+          circle {
+            display: none;
+          }
+        }
+        &:hover {
+          background: darken($Blue, 10%);
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(xxs) {
+  .projects-page {
+    .projects-popup {
+      iframe {
+        height: 260px;
+      }
+    }
+  }
+}
+
+@include breakpoint(xxxs) {
+  iframe {
+    height: 180px;
+  }
+  .projects-page {
+    .projects-popup {
+      iframe {
+        height: 180px;
+      }
+    }
+  }
 }

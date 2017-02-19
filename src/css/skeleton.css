@@ -49,7 +49,7 @@
 }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) {
+@media (min-width: 767px) {
   .container {
     width: 80%; }
   .column,
@@ -394,25 +394,102 @@ hr {
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
 
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
+@media (max-width: 1199px) {
+  .md-one.column,
+  .md-one.columns                    { width: 4.66666666667%; }
+  .md-two.columns                    { width: 13.3333333333%; }
+  .md-three.columns                  { width: 22%;            }
+  .md-four.columns                   { width: 30.6666666667%; }
+  .md-five.columns                   { width: 39.3333333333%; }
+  .md-six.columns                    { width: 48%;            }
+  .md-seven.columns                  { width: 56.6666666667%; }
+  .md-eight.columns                  { width: 65.3333333333%; }
+  .md-nine.columns                   { width: 74.0%;          }
+  .md-ten.columns                    { width: 82.6666666667%; }
+  .md-eleven.columns                 { width: 91.3333333333%; }
+  .md-twelve.columns                 { width: 100%; margin-left: 0; }
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+  .md-one-third.column               { width: 30.6666666667%; }
+  .md-two-thirds.column              { width: 65.3333333333%; }
 
-/* Larger than tablet */
-@media (min-width: 750px) {}
+  .md-one-half.column                { width: 48%; }
+  
+  .md-text-center { text-align: center; }
+  
+  .md-gutter-remove { margin-left: 0; }
+}
+@media (max-width: 991px) {
+  .sm-one.column,
+  .sm-one.columns                    { width: 4.66666666667%; }
+  .sm-two.columns                    { width: 13.3333333333%; }
+  .sm-three.columns                  { width: 22%;            }
+  .sm-four.columns                   { width: 30.6666666667%; }
+  .sm-five.columns                   { width: 39.3333333333%; }
+  .sm-six.columns                    { width: 48%;            }
+  .sm-seven.columns                  { width: 56.6666666667%; }
+  .sm-eight.columns                  { width: 65.3333333333%; }
+  .sm-nine.columns                   { width: 74.0%;          }
+  .sm-ten.columns                    { width: 82.6666666667%; }
+  .sm-eleven.columns                 { width: 91.3333333333%; }
+  .sm-twelve.columns                 { width: 100%; margin-left: 0; }
 
-/* Larger than desktop */
-@media (min-width: 1000px) {}
+  .sm-one-third.column               { width: 30.6666666667%; }
+  .sm-two-thirds.column              { width: 65.3333333333%; }
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+  .sm-one-half.column                { width: 48%; }
+  
+  .sm-text-center { text-align: center; }
+  
+  .sm-gutter-remove { margin-left: 0; }
+}
+@media (max-width: 767px) {
+  .xs-one.column,
+  .xs-one.columns                    { width: 4.66666666667%; }
+  .xs-two.columns                    { width: 13.3333333333%; }
+  .xs-three.columns                  { width: 22%;            }
+  .xs-four.columns                   { width: 30.6666666667%; }
+  .xs-five.columns                   { width: 39.3333333333%; }
+  .xs-six.columns                    { width: 48%;            }
+  .xs-seven.columns                  { width: 56.6666666667%; }
+  .xs-eight.columns                  { width: 65.3333333333%; }
+  .xs-nine.columns                   { width: 74.0%;          }
+  .xs-ten.columns                    { width: 82.6666666667%; }
+  .xs-eleven.columns                 { width: 91.3333333333%; }
+  .xs-twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .xs-one-third.column               { width: 30.6666666667%; }
+  .xs-two-thirds.column              { width: 65.3333333333%; }
+
+  .xs-one-half.column                { width: 48%; }
+  
+  .xs-text-center { text-align: center; }
+  
+  .xs-gutter-remove { margin-left: 0; }
+}
+@media (max-width: 479px)  {
+  .xxs-one.column,
+  .xxs-one.columns                    { width: 4.66666666667%; }
+  .xxs-two.columns                    { width: 13.3333333333%; }
+  .xxs-three.columns                  { width: 22%;            }
+  .xxs-four.columns                   { width: 30.6666666667%; }
+  .xxs-five.columns                   { width: 39.3333333333%; }
+  .xxs-six.columns                    { width: 48%;            }
+  .xxs-seven.columns                  { width: 56.6666666667%; }
+  .xxs-eight.columns                  { width: 65.3333333333%; }
+  .xxs-nine.columns                   { width: 74.0%;          }
+  .xxs-ten.columns                    { width: 82.6666666667%; }
+  .xxs-eleven.columns                 { width: 91.3333333333%; }
+  .xxs-twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .xxs-one-third.column               { width: 30.6666666667%; }
+  .xxs-two-thirds.column              { width: 65.3333333333%; }
+
+  .xxs-one-half.column                { width: 48%; }
+  
+  .xxs-text-center { text-align: center; }
+  
+  .xxs-gutter-remove { margin-left: 0; }
+  
+}

@@ -1,22 +1,22 @@
-const Film_Projects_Data = [
+const Film_Post_Data = [
   {
-    title: "Mortal Kombat",
-    description: "Lorem ipsum vitae justo, ullamcorper. Lectus Aliquam sapien ante. Condimentum lobortis massa aliquet nostra, vitae.",
-    video_src: "https://player.vimeo.com/video/188933825",
+    title: "Akashi",
+    description: "Through two Japanese women from different generations, Akashi shows an “international citizen”'s look at what it means to negotiate love. The SHOULDs, WOULDs and COULDs about choice...and the grace of accepting when there isn’t one.",
+    video_src: "https://player.vimeo.com/video/203756331",
     id: "project-1"
   },
   {
-    title: "Video Game Sound File",
-    description: "Lorem ipsum ut iaculis in. Metus a turpis lobortis pellentesque. Fringilla eu nec ultrices volutpat, eu urna Praesent dapibus vestibulum sit tempus, vitae feugiat ipsum commodo efficitur, Nunc non per mi lectus metus rhoncus a metus.",
-    video_src: "https://player.vimeo.com/video/188933825",
+    title: "Sad Robot",
+    description: "An original guitar composition created for a short film featuring a robot. All audio assets either created originally or sound library content that has been modified by me.",
+    video_src: "https://player.vimeo.com/video/201618231",
     id: "project-2"
   },
   {
-    title: "Circus Devil",
-    description: "Lorem ipsum vel amet quis, tincidunt Nam sed lobortis Cras diam Aliquam volutpat, metus erat luctus quam.",
-    video_src: "https://player.vimeo.com/video/188933825",
+    title: "Step Right Up",
+    description: "A young troublemaker sneaks into an old-timey carnival and gets more than he bargained for when the devil himself offers him a ride.",
+    video_src: "https://player.vimeo.com/video/201618565",
     id: "project-3"
-  },
+  }
 ];
 
-export default Film_Projects_Data;
+export default Film_Post_Data;

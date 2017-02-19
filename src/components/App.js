@@ -6,27 +6,48 @@ import Header from './Header';
 import Popup from './Popup';
 
 class App extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      'navClass': ''
+    };
+  }
+    
+  handleClick() {
+    if (this.state.navClass == 'active') {
+      this.setState({ 'navClass': '' })
+    } else {
+      this.setState({ 'navClass': 'active' })
+    }
+  }
+  
+  removeNavClass() {
+    if (this.state.navClass == 'active') {
+      this.setState({ 'navClass': '' });
+    }
+  }
+  
   render() {
     return (
       <div>
         <nav className="side-nav">
           <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/video-game-projects">Video Game Projects</NavLink></li>
-            <li><NavLink to="/film-projects">Film Projects</NavLink></li>
-            <li><NavLink to="/music-projects">Music Projects</NavLink></li>
-            <li><NavLink to="/courses">About Me</NavLink></li>
-            <li><NavLink to="/courses">Contact</NavLink></li>
+            <li onClick={ this.handleClick.bind(this) }><NavLink to="/">Home</NavLink></li>
+            <li onClick={ this.handleClick.bind(this) }><NavLink to="/sound-design">Sound Design</NavLink></li>
+            <li onClick={ this.handleClick.bind(this) }><NavLink to="/video-game-projects">Video Game Sound</NavLink></li>
+            <li onClick={ this.handleClick.bind(this) }><NavLink to="/film-projects">Film & Post Production</NavLink></li>
+            <li onClick={ this.handleClick.bind(this) }><NavLink to="/music-projects">Music Projects</NavLink></li>
+            <li onClick={ this.handleClick.bind(this) }><NavLink to="/about">About Me</NavLink></li>
+            <li onClick={ this.handleClick.bind(this) }><NavLink to="/contact">Contact</NavLink></li>
           </ul>
           <div className="social-links">
             <Social />
           </div>
         </nav>
-      <Popup />
-      <main>
-      <div className="darken-background"></div>
-      <Header />
-        { this.props.children }
+      <main onClick={ this.removeNavClass.bind(this) } className={this.state.navClass}>
+      <Header menuActive={this.state.navClass} handleClick={ this.handleClick.bind(this) } />
+      {this.props.children}
       <Footer />
       </main>
       </div>

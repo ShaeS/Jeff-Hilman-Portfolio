@@ -4,18 +4,12 @@ footer {
   padding: 2em 0;
   position: relative;
   box-shadow: 0px -1px 1.5px rgba(0,0,0,0.12), 0 -1px 1px rgba(0,0,0,0.24);
-  
   .row {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
     display: -o-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
   }
   
@@ -45,5 +39,24 @@ footer {
   
   p {
     margin: 0;
+  }
+}
+
+@include breakpoint(sm) {
+  footer {
+    p {
+      margin-bottom: 20px;
+    }
+    .row {
+      display: block;
+    }
+  }
+}
+
+@include breakpoint(xxs) {
+  footer {
+    svg {
+      margin-top: 20px;
+    }
   }
 }

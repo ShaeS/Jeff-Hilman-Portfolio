@@ -11,6 +11,27 @@ $shadow3: 0px 10px 10px rgba(0,0,0,0.19), 0 6px 3px rgba(0,0,0,0.23);
 $shadow4: 0px 14px 14px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22);
 $shadow5: 0px 19px 19px rgba(0,0,0,0.30), 0 15px 6px rgba(0,0,0,0.22);
 
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin breakpoint($point) {
+  @if $point == md {
+    @media (max-width: 1199px) { @content ; }
+  }
+  @else if $point == sm {
+    @media (max-width: 991px) { @content ; }
+  }
+  @else if $point == xs {
+    @media (max-width: 767px) { @content ; }
+  }
+  @else if $point == xxs {
+    @media (max-width: 479px)  { @content ; }
+  }
+  @else if $point == xxxs {
+    @media (max-width: 379px)  { @content ; }
+  }
+}
+
 
 /*************************************
 UTILITY CLASSES
@@ -81,6 +102,12 @@ h1,h2,h3,h4,h5,h6 {
 
 a {
   color: $Blue;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s color;
+  &:hover {
+    color: darken($Blue, 10%);
+  }
 }
 
 iframe {
@@ -94,8 +121,18 @@ main {
   transition: transform 0.4s, filter 0.6s;
   position: relative;
   z-index: 1;
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  > div:nth-child(2) {
+    flex: 1;
+  }
 
-  &.menu-open {
+  &.active {
     -webkit-transform: translateX(-250px);
     transform: translateX(-250px);
   }
@@ -105,59 +142,14 @@ main {
   }
 }
 
-.projects-popup {
-	position: fixed;
-	top: 10vh; left: 50%;
-	z-index: 6;
-  background: white;
-	border-radius: 3px;
-  box-shadow: $shadow5;
-  width: 560px;
-  max-height: 80vh;
-  margin-left: -280px;
-  overflow-y: scroll;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.6s;
-  -webkit-transition: opacity 0.6s;
-  &.show {
-    opacity: 1;
-    visibility: visible;
-  }
-  iframe {
-    width: inherit;
-    height: 315px;
-    box-shadow: none;
-  }
-  p {
-    padding: 40px;
-  }
-}
-
-.darken-background {
-  background: rgba(0,0,0,0.4);
-  position: fixed;
-  z-index: 5;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.6s;
-  -webkit-transition: opacity 0.6s;
-  &.show {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
 .primary-button {
   background-color: $Blue;
   background-image: $BlueGradient;
   display: inline-block;
   color: white;
+  font-weight: normal;
   text-transform: uppercase;
+  text-decoration: none;
   padding: 0.8em 2.2em;
   border-radius: 5px;
   -webkit-transition: box-shadow 0.3s, -webkit-filter 0.3s;
@@ -209,6 +201,28 @@ BANNER
     margin: 80px auto 30px;
     h1 {
       font-size: 4.0rem;
+    }
+  }
+}
+
+@include breakpoint(xs) {
+  .padding-left {
+    padding-left: 0;
+  }
+  .padding-right {
+    padding-right: 0;
+  }
+}
+
+@include breakpoint(xxs) {
+  .primary-button {
+    font-size: 13px;
+  }
+  .banner {
+    .banner--content {
+      h1 {
+        font-size: 3rem;
+      }
     }
   }
 }

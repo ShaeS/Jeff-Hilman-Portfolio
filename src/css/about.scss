@@ -1,0 +1,25 @@
+.about-page {
+  padding: 80px 0;
+  svg {
+    padding: 15px;
+    width: 100%;
+    polygon {
+      transition: transform 0.3s;
+    }
+    #Path-3 {
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+    &:hover {
+      @for $i from 1 through 245 {
+        #Jeff-Polygon polygon:nth-child(#{$i}) {
+          transform: translateY(random(600) - 300 + px) translateX(random(600) - 300 + px);
+        }
+      }
+      #Path-3 {
+        opacity: 0;
+      }
+    }
+    
+  }
+}

@@ -1,7 +1,8 @@
+var webpack = require("webpack");
 module.exports = {
   entry: './src/index.js',
-  
   output: {
+    path: 'dist',
     filename: 'bundle.js'
   },
   
@@ -28,5 +29,14 @@ module.exports = {
         loaders: ["style-loader", "css-loader", "sass-loader"]
       }
     ]
-  }
+  },
+  
+//  plugins: [
+//    new webpack.DefinePlugin({
+//      'process.env': {
+//        'NODE_ENV': JSON.stringify('production')
+//      }
+//    }),
+//    new webpack.optimize.UglifyJsPlugin({minimize: true})
+//  ]
 };
