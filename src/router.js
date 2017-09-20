@@ -11,6 +11,7 @@ import Music_Projects from './pages/Music-Projects';
 import Sound_Design from './pages/Sound-Design';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 // Routes
 const routes = (
@@ -23,6 +24,7 @@ const routes = (
       <Route path="music-projects" component={Music_Projects} />
       <Route path="about" component={About} />
       <Route path="contact" component={Contact} />
+      <Route path="*" component={NotFound} />
     </Route>
   </Router>
 );

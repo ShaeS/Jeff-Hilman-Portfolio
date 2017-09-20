@@ -7,6 +7,9 @@ const Banner = (props) => {
   if ( props.button == 'demos' ) {
     buttonLink = "/";
     buttonText = "Demo Reels";
+  } else if ( props.button == 'home' ) {
+    buttonLink = "/";
+    buttonText = "Go Home";
   } else {
     buttonLink = "/contact";
     buttonText = "Contact Me";

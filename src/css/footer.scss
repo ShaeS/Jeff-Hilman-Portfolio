@@ -42,6 +42,13 @@ footer {
   }
 }
 
+.shae-link {
+  color: #2e2e2e;
+  &:hover {
+    color: #333;
+  }
+}
+
 @include breakpoint(sm) {
   footer {
     p {

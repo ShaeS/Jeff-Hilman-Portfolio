@@ -2,7 +2,6 @@ import React from 'react';
 import {Scroll, Link, Element} from 'react-scroll';
 import NavLink from '../components/NavLink';
 import Demos from '../data/demos';
-import Header from '../components/Header';
 
 const Home = () => {
   let demos = Demos.map((demo) => {

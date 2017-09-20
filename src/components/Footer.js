@@ -22,7 +22,7 @@ const Footer = () => {
       </footer>
 
       <div className="low-footer">
-        <p>Jeff Hilman &copy; 2017. All Rights Reserved</p>
+        <p>Jeff Hilman &copy; 2017. All Rights Reserved - Website by <a className="shae-link" target="_blank" href="http://www.shaescotten.com">Shae Scotten</a></p>
       </div>
     </div>
   );

@@ -22,4 +22,22 @@
     }
     
   }
+  
+  .program-logos {
+    margin-top: 30px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+      max-width: 100%;
+      max-height: 130px;
+      &.shrink-logo {
+        padding: 15px;
+      }
+    }
+  }
 }

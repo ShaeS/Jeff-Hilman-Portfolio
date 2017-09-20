@@ -118,14 +118,11 @@ iframe {
 
 main {
   background: white;
-  transition: transform 0.4s, filter 0.6s;
+  transition: transform 0.4s;
   position: relative;
   z-index: 1;
   min-height: 100vh;
   display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
   display: flex;
   flex-direction: column;
   > div:nth-child(2) {
@@ -170,6 +167,10 @@ main {
 .pink-gradient {
   background-color: $Pink;
   background-image: $PinkGradient;
+}
+
+.not-found {
+  padding: 80px 0;
 }
 
 /*************************************

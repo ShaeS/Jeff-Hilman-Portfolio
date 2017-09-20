@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Popup from '../components/Popup';
 
@@ -27,7 +26,7 @@ class Music_Projects extends Component {
   
   render() {
     
-    const projectDescription = "Spicy jalapeno bacon ipsum dolor amet ham rump sirloin burgdoggen. Picanha sausage tenderloin, hamburger beef venison kielbasa beef ribs shoulder turducken pork belly ball tip boudin alcatra shank. Fatback turkey tail flank shank, short loin brisket ham leberkas capicola sirloin shoulder ground round. Jerky sirloin ham burgdoggen boudin shoulder jowl pancetta drumstick cupim biltong pork belly short ribs. Drumstick tenderloin tail short loin, hamburger ribeye meatloaf. Pork chop turducken pork ham hock.";
+    const projectDescription = 'A playlist of songs recorded, produced, mixed, and mastered during my time at Nimbus School of Recording & Media. For a detailed description, click "see more"';
     
     const projectVideo = "https://player.vimeo.com/video/203756331";
     
@@ -41,9 +40,7 @@ class Music_Projects extends Component {
           <div className="container">
             <div className="row text-center">
               <div className="twelve columns">
-                <p>Spicy jalapeno bacon ipsum dolor amet ham rump sirloin burgdoggen. Picanha sausage tenderloin, hamburger beef venison kielbasa beef ribs shoulder turducken pork belly ball tip boudin alcatra shank. Fatback turkey tail flank shank, short loin brisket ham leberkas capicola sirloin shoulder ground round. Jerky sirloin ham burgdoggen boudin shoulder jowl pancetta drumstick cupim biltong pork belly short ribs. Drumstick tenderloin tail short loin, hamburger ribeye meatloaf. Pork chop turducken pork ham hock.</p>
-                <a onClick={this.handleClick.bind(this)} className="music-button primary-button pink-gradient">Project Details</a>
-                <Popup projectclass={ this.state.popupClass } projectvideo={ projectVideo } projectdetails={ projectDescription } />
+                <p>A playlist of songs recorded, produced, mixed, and mastered during my time at Nimbus School of Recording & Media with my band, Aivia.</p>
               </div>
             </div>
             <div className="row text-center">
@@ -59,5 +56,8 @@ class Music_Projects extends Component {
   );
   }
 }
+
+//                <a onClick={this.handleClick.bind(this)} className="music-button primary-button pink-gradient">Project Details</a>
+//                <Popup projectclass={ this.state.popupClass } projectvideo={ projectVideo } projectdetails={ projectDescription } />
 
 export default Music_Projects;

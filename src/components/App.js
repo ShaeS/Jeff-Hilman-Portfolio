@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav className="side-nav">
+        <nav className={"side-nav " + this.state.navClass}>
           <ul>
             <li onClick={ this.handleClick.bind(this) }><NavLink to="/">Home</NavLink></li>
             <li onClick={ this.handleClick.bind(this) }><NavLink to="/sound-design">Sound Design</NavLink></li>

@@ -19,6 +19,7 @@
     position: fixed;
     top: 10vh; left: 50%;
     z-index: 6;
+    text-align: left;
     background: white;
     border-radius: 3px;
     box-shadow: $shadow5;
@@ -37,8 +38,13 @@
       height: 315px;
       box-shadow: none;
     }
+    h4 {
+      text-align: center;
+      margin-top: 20px;
+      padding: 0 15px;
+    }
     p {
-      padding: 40px;
+      padding: 0 15px 40px;
       overflow-y: scroll;
       max-height: 30vh;
     }
@@ -137,6 +143,9 @@
     .projects-popup {
       iframe {
         height: 260px;
+      }
+      p {
+        width: 90%;
       }
     }
   }

@@ -18,7 +18,8 @@ class Popup extends Component {
           </svg>
         </span>
         <iframe className="depth-three" src={this.props.projectvideo + "?color=64BCDF&title=0&byline=0&portrait=0"}></iframe>
-        <p>{this.props.projectdetails}</p>
+        <h4>{ this.props.projecttitle }</h4>
+        <p dangerouslySetInnerHTML={ {__html: this.props.projectdetails } } />
       </div>
     );
   }
@@ -27,6 +28,7 @@ class Popup extends Component {
 Popup.propTypes = {
   handleClick: React.PropTypes.func,
   projectvideo: React.PropTypes.string.isRequired,
+  projecttitle: React.PropTypes.string.isRequired,
   projectdetails: React.PropTypes.string.isRequired,
   projectclass: React.PropTypes.string.isRequired
 };

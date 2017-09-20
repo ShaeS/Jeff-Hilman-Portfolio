@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import Banner from '../components/Banner';
 import JeffProfile from '../components/JeffProfile';
 
@@ -12,17 +11,82 @@ const About = () => {
         <div className="about-page">
             <div className="container">
               <div className="row">
-                <div className="four columns">
+                <div className="three columns">
                   <JeffProfile />
                 </div>
-                <div className="eight columns">
-                  <h4>Hey I'm Jeff and and I'll suck your Dick</h4>
+                <div className="nine columns">
+                  <h4>Jeff Hilman, Audio Specialist:</h4>
     
-                  <p>Spicy jalapeno bacon ipsum dolor amet ham rump sirloin burgdoggen. Picanha sausage tenderloin, hamburger beef venison kielbasa beef ribs shoulder turducken pork belly ball tip boudin alcatra shank. Fatback turkey tail flank shank, short loin brisket ham leberkas capicola sirloin shoulder ground round. Jerky sirloin ham burgdoggen boudin shoulder jowl pancetta drumstick cupim biltong pork belly short ribs. Drumstick tenderloin tail short loin, hamburger ribeye meatloaf. Pork chop turducken pork ham hock.</p>
-
-                  <p>Frankfurter salami venison, doner pork jerky cow ham hock turkey kevin shank cupim ground round. Tail filet mignon short loin shoulder turducken ground round chuck ham hock alcatra. Andouille pastrami tongue ham hock biltong. Tongue ham hock biltong flank. Short ribs ribeye bacon venison frankfurter.</p>
+                  <p>As an enthusiastic young professional breaking into Vancouver’s audio scene, I am looking to use my skills and expertise to enhance any and all projects in the world of music composition, sound design, and audio for video games. Currently working at Capcom Game Studio Vancouver responsible for sound design, audio implementation, audio editing, and more.</p>
                 </div>
               </div>
+    
+              <div className="row text-center">
+                <div className="twelve columns">
+                  <h4>Programs I Use</h4>
+                </div>
+              </div>
+    
+              <div className="row program-logos text-center">
+    
+                <div className="three columns">
+                  <img src="./src/assets/protools.jpg" alt="Protools" />
+                </div>
+    
+                <div className="three columns">
+                  <img className="shrink-logo" src="./src/assets/ableton.jpg" alt="Ableton" />
+                </div>
+    
+                <div className="three columns">
+                  <img src="./src/assets/logicx.jpg" alt="Logic X" />
+                </div>
+    
+                <div className="three columns">
+                  <img className="shrink-logo" src="./src/assets/izotope.jpg" alt="Izotope RX" />
+                </div>
+    
+              </div>
+    
+              <div className="row program-logos text-center">
+    
+                <div className="three columns">
+                  <img src="./src/assets/wwise.jpg" alt="Wwise" />
+                </div>
+    
+                <div className="three columns">
+                  <img src="./src/assets/fmod.jpg" alt="FMOD" />
+                </div>
+    
+                <div className="three columns">
+                  <img src="./src/assets/unreal.jpg" alt="Unreal Engine 4" />
+                </div>
+    
+                <div className="three columns">
+                  <img src="./src/assets/unity.jpg" alt="Unity" />
+                </div>
+    
+              </div>
+    
+              <div className="row program-logos text-center">
+    
+                <div className="three columns">
+                  <img src="./src/assets/soundly.jpg" alt="Soundly" />
+                </div>
+    
+                <div className="three columns">
+                  <img src="./src/assets/melodyne.jpg" alt="Melodyne" />
+                </div>
+    
+                <div className="three columns">
+                  <img src="./src/assets/waves.jpg" alt="Waves" />
+                </div>
+    
+                <div className="three columns">
+                  <img src="./src/assets/nativeinstruments.jpg" alt="Native Instruments" />
+                </div>
+    
+              </div>
+    
             </div>
           </div>
 

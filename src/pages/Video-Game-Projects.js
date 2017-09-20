@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Popup from '../components/Popup';
 import Video_Game_Projects_Data from '../data/video-game-projects';
@@ -37,7 +36,7 @@ class Video_Game_Projects extends Component {
           <iframe className="depth-three" src={projects.video_src + "?color=64BCDF&title=0&byline=0&portrait=0"}></iframe>
           <p>{projects.description}</p>
           <a onClick={this.handleClick.bind(this, projects.id)} className="project-button primary-button pink-gradient">Project Details</a>
-          <Popup projectclass={this.state.currentPopup == projects.id ? this.state.popupClass : "" } projectvideo={projects.video_src} projectdetails={projects.description} handleClick={this.handleClick.bind(this)} />
+          <Popup projectclass={this.state.currentPopup == projects.id ? this.state.popupClass : "" } projectvideo={projects.video_src} projecttitle={projects.title} projectdetails={projects.longdescription} handleClick={this.handleClick.bind(this)} />
         </div>
       );
     });
